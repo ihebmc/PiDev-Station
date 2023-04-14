@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Station{% endblock %}
+
+{% block body %}
+    <h1>Edit Station</h1>
+
+    {{ include('stations/_form.html.twig', {'button_label': 'Modifier'}) }}
+
+    <a class="btn6" href="{{ path('app_stations_index') }}">Retour</a>
+
+    {{ include('stations/_delete_form.html.twig') }}
+{% endblock %}

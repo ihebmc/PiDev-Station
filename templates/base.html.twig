@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+<link href="https://bootswatch.com/5/lumen/bootstrap.min.css" rel="stylesheet">        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+    <body>
+        <style>
+                        /* style pour le label des champs */
+                label {
+                display: block;
+                margin-bottom: 5px;
+                }
+
+                /* style pour les champs de texte */
+                input[type="text"],
+                textarea {
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                font-size: 16px;
+                width: 100%;
+                margin-bottom: 20px;
+                }
+
+                /* style pour le bouton de sauvegarde */
+                button {
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                padding: 10px 20px;
+                font-size: 16px;
+                border-radius: 4px;
+                cursor: pointer;
+                }
+
+                /* style pour le bouton de sauvegarde lorsqu'il est survolé */
+                button:hover {
+                background-color: #0069d9;
+                }
+
+                /* style pour les erreurs de formulaire */
+                span.form-error {
+                color: #dc3545;
+                font-size: 14px;
+                margin-top: 5px;
+                }
+                .btn1{
+                background:linear-gradient(to left,  #6dd5ed, #2193b0);
+                padding:10px;
+                border-radius: 10px;
+                color:white;
+                text-decoration:none;
+                margin-bottom:20px;
+                }
+                .btn1:hover{
+                background:linear-gradient(to left,  #6dd54d, #2153b0);
+                padding:10px;
+                color:white;
+                }
+                .btn2:hover{
+                background:linear-gradient(to left,  #6dd54d, #2153b0);
+                padding:10px;
+                border-radius: 10px;
+                color:white;
+                }
+                .btn3:hover{
+                background:linear-gradient(to left,  #6dd54d, #2153b0);
+                padding:10px;
+                border-radius: 10px;
+                color:white;
+                }
+                .btn2{
+                background:linear-gradient(to left,  #6dd5ed, #219870);
+                padding:10px;
+                color:white;
+                text-decoration:none;
+                margin-bottom:10px;
+                border-radius: 10px;
+                }
+                .btn3{
+                background:linear-gradient(to left,  #6dd5ed, #2193b0);
+                padding:10px;
+                border-radius: 10px;
+                color:white;
+                text-decoration:none;
+                margin-left:415px;
+                }
+                .btn4{
+                background:linear-gradient(to left, #6dezed, #2193f0);
+                padding:8px;
+                border-radius: 10px;
+                color:white;
+                text-decoration:none;
+                margin-top:13px;
+                margin-left:20px;
+                }
+                .btn5{
+                background:linear-gradient(to left, #6dezed, #2193f0);
+                padding:8px;
+                border-radius: 10px;
+                color:white;
+                text-decoration:none;
+                margin-top:0px;
+                margin-left:300px;
+                }
+                .btn6{
+                background:linear-gradient(to left,  #6dd5ed, #2193b0);
+                padding:8px;
+                border-radius: 10px;
+                color:white;
+                text-decoration:none;
+              
+                margin-left:167px;
+                }
+        </style>
+        
+        
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Station</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                <a class="nav-link active" href="#">Home
+                    <span class="visually-hidden">(current)</span>
+                </a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Registration</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:8000/categ/">Category</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:8000/stations/">List</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+        </nav>
+        {% block body %}{% endblock %}
+    </body>
+</html>

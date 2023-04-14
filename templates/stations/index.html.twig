@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Station index{% endblock %}
+
+{% block body %}
+    <h1>Station index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Location</th>
+                <th>OpenHour</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for station in stations %}
+            <tr>
+                <td>{{ station.id }}</td>
+                <td>{{ station.name }}</td>
+                <td>{{ station.location }}</td>
+                <td>{{ station.openHour }}</td>
+                <td>
+                    <a class="btn1" href="{{ path('app_stations_show', {'id': station.id}) }}">show</a>
+                    <a class="btn1" href="{{ path('app_stations_edit', {'id': station.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a class="btn1" href="{{ path('app_stations_new') }}">Create new</a>
+{% endblock %}
